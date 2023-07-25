@@ -1,24 +1,20 @@
 function highlight() {
     //Write your code here
-	let boldText = document.querySelectorAll("strong")
-	boldText.forEach((element) => {
-		element.style.color = "rgb(0, 128, 0)"
-			// "green"
-	})
+const boldWords = document.querySelectorAll('strong');
+
+  for (let i = 0; i < boldWords.length; i++) {
+    boldWords[i].classList.add('bold-highlight');
+  }
 
 }
 
 
 function return_normal() {
     //Write your code here
-	let boldText = document.querySelectorAll("strong")
-	boldText.forEach((element) => {
-		element.style.color = "rgb(0, 0, 0)"
-			// "black"
-	})
+const boldWords = document.querySelectorAll('strong');
+
+  for (let i = 0; i < boldWords.length; i++) {
+    boldWords[i].classList.remove('bold-highlight');
+  }
     
 }
-let link = document.querySelector("a")
-// let link = document.getElementByTagName("a")[0]
-link.addEventListner('onMouseOver', highlight)
-link.addEventListner('onMouseOut', return_normal)
